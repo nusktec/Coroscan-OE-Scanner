@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lyt_clk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#F4F4F4"
+        android:clickable="true"
+        android:divider="@drawable/space_20dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/state_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bgn"
+            android:text="State Name" />
+
+        <TextView
+            android:id="@+id/state_cno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:text="Case No" />
+
+        <TextView
+            android:id="@+id/state_cdischarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bgd"
+            android:text="Case Dis."
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/state_cdeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bgr"
+            android:text="Case Death"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="dnum"
+            type="String" />
+
+        <variable
+            name="casesnum"
+            type="int" />
+
+        <variable
+            name="cityname"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ru.nikartm.support.ImageBadgeView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:src="@drawable/corona_virus"
+            android:tint="#FF9800"
+            app:ibv_badgeColor="#FF9800"
+            app:ibv_badgeLimitValue="false"
+            app:ibv_badgeTextColor="#ffffff"
+            app:ibv_badgeTextSize="12sp"
+            app:ibv_badgeTextStyle="bold"
+            app:ibv_fixedBadgeRadius="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@{cityname, default=`Lagos`}"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>

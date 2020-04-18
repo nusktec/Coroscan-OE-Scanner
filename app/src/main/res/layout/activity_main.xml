@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="rcolor"
+            type="int" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/bg_drop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:contentDescription="@string/map_image"
+            android:scaleType="fitXY"
+            android:scaleX="1.5"
+            android:src="@drawable/world_map_sm_bw" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/mobile_coroscan"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:id="@+id/scan_1"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--Scanning module-->
+
+                <com.skyfishjy.library.RippleBackground
+                    android:id="@+id/v_scanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:rb_color="#C4C4D3"
+                    app:rb_duration="1800"
+                    app:rb_radius="32dp"
+                    app:rb_rippleAmount="4"
+                    app:rb_scale="5">
+
+                    <ImageView
+                        android:id="@+id/centerImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/map_image"
+                        android:src="@drawable/coa"
+                        android:tint="@color/colorPrimary" />
+
+                    <RelativeLayout
+                        android:id="@+id/scan_b1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="80dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:visibility="gone">
+
+                        <ru.nikartm.support.ImageBadgeView
+                            android:id="@+id/c1no"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:padding="2dp"
+                            android:src="@drawable/corona_virus"
+                            android:tint="#FF5722"
+                            app:ibv_badgeColor="#FF5722"
+                            app:ibv_badgeLimitValue="false"
+                            app:ibv_badgeTextColor="#ffffff"
+                            app:ibv_badgeTextSize="12sp"
+                            app:ibv_badgeTextStyle="bold"
+                            app:ibv_badgeValue="1"
+                            app:ibv_fixedBadgeRadius="15dp" />
+
+                        <ru.nikartm.support.ImageBadgeView
+                            android:id="@+id/c1nod"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="2dp"
+                            android:tint="#4CAF50"
+                            app:ibv_badgeColor="#4CAF50"
+                            app:ibv_badgeLimitValue="false"
+                            app:ibv_badgeTextColor="#ffffff"
+                            app:ibv_badgeTextSize="12sp"
+                            app:ibv_badgeTextStyle="bold"
+                            app:ibv_badgeValue="0"
+                            app:ibv_fixedBadgeRadius="15dp" />
+
+                        <TextView
+                            android:id="@+id/c1name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="Case Name"
+                            android:textAlignment="center"
+                            android:textColor="#FF5722"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/scan_b2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginBottom="80dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:visibility="gone">
+
+                        <ru.nikartm.support.ImageBadgeView
+                            android:id="@+id/c2no"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:padding="2dp"
+                            android:src="@drawable/corona_virus"
+                            android:tint="#FF5722"
+                            app:ibv_badgeColor="#FF5722"
+                            app:ibv_badgeLimitValue="false"
+                            app:ibv_badgeTextColor="#ffffff"
+                            app:ibv_badgeTextSize="12sp"
+                            app:ibv_badgeTextStyle="bold"
+                            app:ibv_badgeValue="1"
+                            app:ibv_fixedBadgeRadius="15dp" />
+
+                        <TextView
+                            android:id="@+id/c2name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="Case State"
+                            android:textAlignment="center"
+                            android:textColor="#FF5722"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </com.skyfishjy.library.RippleBackground>
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/standby_mode"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:divider="@drawable/space"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_xml"
+                android:text="@string/scan"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_xml"
+                android:text="@string/discover"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_xml_red"
+                android:text="Report Case"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
